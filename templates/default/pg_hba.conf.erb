@@ -73,7 +73,7 @@
 # configuration parameter, or via the -i or -h command line switches.
 
 <% node["postgresql"]["pg_hba"].each do |hba| %>
-<%= hba %>
+<%= hba['host'] %> <%= hba['db'] %> <%= hba['user'] %> <%= hba['addr'] %> <%= hba['method'] %>
 <% end %>
 
 # DO NOT DISABLE!
